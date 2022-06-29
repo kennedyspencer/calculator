@@ -28,6 +28,11 @@ body {
     width: 325px;
     margin-top: 40px;
     background-color: #eeeaf3;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    font-size: 50px;
+    padding-right: 5px;
 }
 
 #pad {
