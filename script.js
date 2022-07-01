@@ -25,6 +25,7 @@ function display(input) {
 clear.addEventListener('click', () => {
     screen.textContent = ''
     previousOperand = ''
+    operation = ''
 })
 
 del.addEventListener('click', () => {
@@ -33,12 +34,34 @@ del.addEventListener('click', () => {
 
 add.addEventListener('click', () => {
     if (previousOperand != '') {
+        operate(previousOperand, currentOperand);
+        operation = 'addition'
         
     }
 })
 
 function operate(firstOperand, secondOperand) {
     if (operation === 'addition') {
-        addition(firstOperand, secondOperand);
+        screen.textContent(addition(firstOperand, secondOperand));
     }
+}
+
+function addition(firstOperand, secondOperand) {
+    let sum = firstOperand + secondOperand;
+    return sum;
+}
+
+function subtraction(firstOperand, secondOperand) {
+    let difference = firstOperand - secondOperand;
+    return difference;
+}
+
+function division(firstOperand, secondOperand) {
+    let dividend = firstOperand / secondOperand;
+    return dividend;
+}
+
+function multiplication(firstOperand, secondOperand) {
+    let product = firstOperand * secondOperand;
+    return product;
 }
